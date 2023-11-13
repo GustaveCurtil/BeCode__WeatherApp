@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="fetch.js" defer></script>
+    <script src="script.js" defer ></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
@@ -10,46 +12,22 @@
     <header>
         <h2>Weather App</h2>
         <div class="search-container">
-            <form>
-              <input type="text" placeholder="City" name="city"><button type="submit">🔎</button>
+            <form action="">
+              <input type="text" placeholder="City" name="city"><button type="button">🔎</button>
             </form>
         </div>
     </header>
 
     <main>
-        <h2>City</h2>
-        <p class="now-temperature">12°</p>
-        <p class="now-weather">Cloudy</p>
     </main>
 
     <summary>
         <div class="forecast">
-            <p class="day">Mon</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
-            <p class="day">Tue</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
-            <p class="day">Wed</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
-            <p class="day">Thu</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
-            <p class="day">Fri</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
-            <p class="day">Sat</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Rainy</p>
-            <p class="day">Sun</p>
-            <p class="min-max">8° - 16°</p>
-            <p class="weather">Cloudy</p>
         </div>
     </summary>
 
     <footer>
-        <a class="banner" href="https://music-memory.netlify.app/">
+        <a class="banner" href="https://music-memory.netlify.app/" target="_blank">
             <h3>BAD WEATHER? PLAY THE LATEST MEMORY GAME!</h3>
             <h3>BAD WEATHER? PLAY THE LATEST MEMORY GAME!</h3>
             <h3>BAD WEATHER? PLAY THE LATEST MEMORY GAME!</h3>
