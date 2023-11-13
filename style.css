@@ -11,6 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -25,7 +26,7 @@ main {
 
 summary {
     width: 100%;
-    height: 40vh;
+    height: 45vh;
 }
 
 footer {
@@ -38,14 +39,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
 }
 
 .search-container {
-    width: 80%;
-    max-width: 600px;
-}
-
-form {
+    width: 90%;
+    max-width: 400px;
     background-color: white;
     border-radius: 40px;
     margin-top: 10px;
@@ -57,6 +56,11 @@ input {
     box-sizing: border-box;
     border-radius: 40px 0 0 40px;
     padding: 0 20px;
+    border: 0;
+}
+
+input[type=text]:focus {
+    outline:none
 }
 
 button {
@@ -64,11 +68,9 @@ button {
     height: 5vh;
     border-radius: 40px;
     background-color: rgb(207, 207, 207);
+    border: 0; 
 }
 
-form, form input, form button {
-    border: 0;
-}
 
 /*WEATHER NOW*/
 main {
@@ -78,8 +80,8 @@ main {
     align-items: center;
 }
 
-h2 {
-    font-size: xx-large;
+main h2 {
+    font-size: 4rem;
 }
 
 .now-temperature {
@@ -92,8 +94,8 @@ h2 {
 
 /*Weather of the coming days*/
 .forecast {
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     height: inherit;

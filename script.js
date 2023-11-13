@@ -4,6 +4,13 @@ let searchButton = document.querySelector('.search-container button')
 
 console.log(searchBar.value)
 
+searchBar.addEventListener("keyup", (e) => {
+    if (e.key == 'Enter') {
+        city = searchBar.value
+        fetchGeoLoc(city)
+    }
+})
+
 searchButton.addEventListener("click", (e) => {
     city = searchBar.value
     fetchGeoLoc(city)
@@ -11,9 +18,10 @@ searchButton.addEventListener("click", (e) => {
 
 function fillInCityName(city, temp, code) {
     const main = document.querySelector("main");
+    main.innerHTML=""
 
     const cityHeading = document.createElement("h2");
-    cityHeading.textContent = city;
+    cityHeading.textContent = city.charAt(0).toUpperCase() + city.slice(1);
 
     const temperature = document.createElement("p");
     temperature.classList.add("now-temperature");
@@ -29,6 +37,8 @@ function fillInCityName(city, temp, code) {
 }
 
 function fillInForecast(min, max, code) {
+    const forecast = document.querySelector(".forecast");
+    forecast.innerHTML = "";
     for (let i = 0; i < min.length; i++) {
         const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday", "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
         const d = new Date();
@@ -61,7 +71,7 @@ function weatherCode(code) {
     if (code == 0) {
         return "Clear sky"
     } if (code == 1 || code == 2 || code == 3) {
-        return "mainly clear"
+        return "Mainly clear"
     } if (code == 45 || code == 48) {
         return "Fog"
     } if (code > 50 && code < 60 ) {
