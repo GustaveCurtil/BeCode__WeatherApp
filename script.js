@@ -2,12 +2,11 @@
 let searchBar = document.querySelector(".search-container input")
 let searchButton = document.querySelector('.search-container button')
 
-console.log(searchBar.value)
-
 searchBar.addEventListener("keyup", (e) => {
-    if (e.key == 'Enter') {
+    if (e.code === 'Enter') {
         city = searchBar.value
         fetchGeoLoc(city)
+        
     }
 })
 
@@ -64,9 +63,6 @@ function fillInForecast(min, max, code) {
     }
 }
 
-
-console.log(day)
-
 function weatherCode(code) {
     if (code == 0) {
         return "Clear sky"
@@ -85,4 +81,12 @@ function weatherCode(code) {
     } else {
         return "Bad weather"
     }
+
 }
+
+
+// function createBg() {
+//     let scriptElement = document.createElement("script");
+//     scriptElement.src = "sketch-rain.js";
+//     document.head.appendChild(scriptElement);
+// }
